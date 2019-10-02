@@ -1,6 +1,6 @@
 import User from '../models/User'
 
-export default {
+class SessionController {
     async store(req , res){
 
         const { email } = req.body;
@@ -13,3 +13,5 @@ export default {
         return res.json(user)
     }
 }
+
+export default new SessionController();
