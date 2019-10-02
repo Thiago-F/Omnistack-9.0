@@ -1,6 +1,6 @@
 import mongoose , {Schema} from 'mongoose';
 
-const UserSchema = new Schema({
+const SpotSchema = new Schema({
     thumbnail : String,
     company : String,
     price : Number,
@@ -11,4 +11,4 @@ const UserSchema = new Schema({
     }
 });
 
-export default mongoose.model('Spot' , UserSchema);
+export default mongoose.model('Spot' , SpotSchema);
