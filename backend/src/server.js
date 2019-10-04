@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import cors from 'cors'
+import cors from 'cors';
+import path from 'path';
+
 import routes from './routes';
 
 const app = express();
@@ -12,6 +14,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-wtgxs.mongodb.net/
 
 app.use(cors);
 app.use(express.json());
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 
